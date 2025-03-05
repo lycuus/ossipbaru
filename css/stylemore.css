@@ -1,0 +1,302 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInTop {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Header Section */
+  .navigasi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1b436b;
+    color: white;
+    padding: 15px 20px;
+    opacity: 0;
+    animation: slideInTop 1s ease-out forwards;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar .nav-link {
+    margin: 0 15px;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .navbar .nav-link a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    display: block;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .navbar .nav-link a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+  }
+  
+  .drop-down {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .services:hover .drop-down {
+    display: block;
+    opacity: 1;
+  }
+  
+  .drop-down li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .drop-down li a:hover {
+    background-color: #1abc9c;
+  }
+  
+  a {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  a:hover {
+    color: #2d2f34;
+  }
+
+  /*HERO (BACKGROUND*/
+/* Memberikan tinggi penuh ke section */
+.hero {
+    position: relative;
+    min-height: 100vh; /* Pastikan setidaknya setinggi layar */
+    overflow-y: auto; /* Memungkinkan scrolling jika konten lebih tinggi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 100%; /* Pastikan lebar penuh */
+}
+
+/* Menambahkan latar belakang */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Pastikan menutupi seluruh layar */
+    background: url('/images/no\ bulet.png') center/cover no-repeat;
+    filter: brightness(0.7); /* Efek gelap agar teks lebih jelas */
+    z-index: -1; /* Agar tetap di belakang teks */
+}
+
+h1 {
+    font-size: 3rem;
+    z-index: 1; /* Pastikan teks tetap terlihat di atas latar belakang */
+}
+
+
+/*PROFILE OSSIP*/
+
+.profile-section {
+    padding: 50px 20px;
+    background: url('/images/INSAN\ PRATAMA.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+  }          
+  
+  .profile-container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Animasi Fade In */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Container untuk menampung logo */
+  .profile-logo-container {
+    display: flex;
+    flex-direction: column; /* Susun logo atas-bawah */
+    align-items: center;
+    margin-right: 20px; /* Jarak antara logo dan teks */
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  /* Animasi Slide dari Kiri */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Styling untuk logo */
+  .profile-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 50px; /* Tambahkan jarak antar logo */
+  }
+
+  .profile-logo-container .profile-logo:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Styling untuk teks */
+  .profile-text {
+    flex: 1;
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.7s;
+  }
+  
+  /* Animasi Slide dari Kanan */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .profile-text h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .profile-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
+  
+    .profile-logo-container {
+      margin: 0 auto 15px auto; /* Tengahkan logo di HP */
+    }
+  
+    .profile-logo {
+      width: 100px;
+    }
+  
+    .profile-text h2 {
+      font-size: 20px;
+    }
+  
+    .profile-text p {
+      font-size: 14px;
+    }
+  }
